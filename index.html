@@ -3,32 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Beautiful Website</title>
+    <title>Photography Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
+        <h1>Dream Starts</h1>
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <!-- Add more navigation links -->
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <h1>Welcome to My Website</h1>
-            <p>Beautiful and simple.</p>
+    <main class="container">
+        <section id="about" class="about">
+            <h2>About Us</h2>
+            <p>Welcome to Dream Starts Photography, where we capture your dreams through our lenses. With our team of talented photographers, we specialize in creating stunning and memorable images that tell your unique story. Whether it's a wedding, portrait, or special event, we are dedicated to providing exceptional service and delivering breathtaking results. Let us turn your moments into everlasting memories.</p>
         </section>
-        <!-- Add other sections (e.g., portfolio, blog, contact) -->
+        <section id="portfolio" class="portfolio">
+            <h2>Portfolio</h2>
+            <div class="gallery">
+                <img src="image1.jpg" alt="Photo 1">
+                <img src="image2.jpg" alt="Photo 2">
+                <img src="image3.jpg" alt="Photo 3">
+                <img src="image4.jpg" alt="Photo 4">
+            </div>
+        </section>
+
+        
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <form action="/submit-contact" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <!-- Admin panel for image uploads -->
+        <section class="admin-panel">
+            <h2>Admin Panel</h2>
+            <form action="/upload-image" method="post" enctype="multipart/form-data">
+                <input type="file" name="image" accept="image/*">
+                <input type="submit" value="Upload Image">
+            </form>
+        </section>
     </main>
 
     <footer>
-        <p>© 2024 My Beautiful Website</p>
+        <p>© 2024 Dream Starts Photography</p>
     </footer>
-
-    <script src="app.js"></script>
 </body>
 </html>
